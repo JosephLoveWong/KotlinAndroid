@@ -2,7 +2,6 @@ package com.promiseland.kotlinandroid.ui.base
 
 import android.os.Bundle
 import android.support.annotation.Nullable
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.promiseland.kotlinandroid.WeiYueApp
 import javax.inject.Inject
@@ -10,7 +9,7 @@ import javax.inject.Inject
 /**
  * Created by joseph on 2018/2/18.
  */
-abstract class BaseActivity<T : BaseContract.BasePresenter> : AppCompatActivity(), IBase, BaseContract.BaseView {
+abstract class BaseActivity<T : BaseContract.BasePresenter> : SupportActivity(), IBase, BaseContract.BaseView {
     private lateinit var mRootView :View
 
     @Nullable

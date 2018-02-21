@@ -8,7 +8,7 @@ import com.promiseland.kotlinandroid.ui.base.BaseContract
 /**
  * Created by joseph on 2018/2/18.
  */
-class MainActivity :BaseActivity<BaseContract.BasePresenter>() {
+class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
     /**
      * 获取页面布局 id
      */
@@ -25,6 +25,13 @@ class MainActivity :BaseActivity<BaseContract.BasePresenter>() {
      * 加载数据
      */
     override fun initData() {
-
+//        navigation.setOnNavigationItemSelectedListener {
+//            when (it.itemId) {
+//                action_news -> 1
+//                action_video -> 2
+//                action_my -> 2
+//                else -> 4
+//            }
+//        }
     }
 }

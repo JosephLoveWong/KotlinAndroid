@@ -1,5 +1,7 @@
 package com.promiseland.kotlinandroid
 
+import com.promiseland.kotlinandroid.ui.mvp.news.di.NewsComponent
+import com.promiseland.kotlinandroid.ui.mvp.news.di.NewsModule
 import dagger.Component
 
 /**
@@ -8,5 +10,6 @@ import dagger.Component
 @Component(modules = [
     (AppModule::class)
 ])
-interface AppComponent{
+interface AppComponent {
+    fun plus(newsModule: NewsModule): NewsComponent
 }

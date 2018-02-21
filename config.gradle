@@ -47,7 +47,7 @@ ext {
 
             //ui
             "constraint-layout"     : "com.android.support.constraint:constraint-layout:1.0.2",
-            "fragmentation"         : "me.yokeyword:fragmentation:1.0.0",
+            "fragmentation"         : "me.yokeyword:fragmentation:1.2.6",
             "butterknife"           : "com.jakewharton:butterknife:8.8.1",
             "butterknife-compiler"  : "com.jakewharton:butterknife-compiler:8.8.1",
             "ultra-ptr"             : "in.srain.cube:ultra-ptr:1.0.11",
