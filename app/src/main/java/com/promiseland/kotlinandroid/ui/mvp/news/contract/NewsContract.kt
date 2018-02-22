@@ -1,5 +1,6 @@
 package com.promiseland.kotlinandroid.ui.mvp.news.contract
 
+import com.promiseland.kotlinandroid.data.api.model.Channel
 import com.promiseland.kotlinandroid.ui.base.BaseContract
 
 /**
@@ -10,7 +11,7 @@ interface NewsContract {
         /**
          * 初始化频道
          */
-//        fun loadData(channels: List<Channel>, otherChannels: List<Channel>)
+        fun loadData(channels: List<Channel>)
     }
 
     interface Presenter : BaseContract.BasePresenter {

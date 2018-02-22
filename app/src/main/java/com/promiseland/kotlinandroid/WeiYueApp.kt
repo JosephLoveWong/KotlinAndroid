@@ -2,6 +2,7 @@ package com.promiseland.kotlinandroid
 
 import android.app.Application
 import android.content.Context
+import com.promiseland.kotlinandroid.data.api.HttpModule
 import kotlin.properties.Delegates
 
 /**
@@ -19,6 +20,7 @@ class WeiYueApp : Application() {
         context = this
         mApplicationComponent = DaggerAppComponent.builder()
                 .appModule(AppModule(this))
+                .httpModule(HttpModule())
                 .build()
     }
 }

@@ -40,11 +40,11 @@ class SplashActivity : BaseActivity<BaseContract.BasePresenter>() {
     override fun initData() {
         ImageLoaderUtil.LoadImage(this, picUrl, iv_ad)
 
-        mCompositeDisposable?.add(countDown(3)
-                .doOnSubscribe { tv_skip.text = "跳过 4" }
+        mCompositeDisposable?.add(countDown(4)
+//                .doOnSubscribe { tv_skip.text = "跳过 4" }
                 .subscribeWith(object : DisposableObserver<Int>() {
                     override fun onNext(t: Int) {
-                        tv_skip.text = "跳过 ${t + 1}"
+                        tv_skip.text = "跳过 ${t}"
                     }
 
                     override fun onError(e: Throwable) {
@@ -63,7 +63,7 @@ class SplashActivity : BaseActivity<BaseContract.BasePresenter>() {
         return Observable.interval(0, 1, TimeUnit.SECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .map { time - it.toInt() }
-                .take((time + 1).toLong())
+                .take(time.toLong())
     }
 
     private fun toMain() {

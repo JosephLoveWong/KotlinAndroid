@@ -10,6 +10,10 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator
  * Created by joseph on 2018/2/21.
  */
 open class SupportActivity : AppCompatActivity(), ISupportActivity {
+    override fun post(runnable: Runnable?) {
+        mDelegate.post(runnable)
+    }
+
     private val mDelegate = SupportActivityDelegate(this)
 
     override fun setFragmentAnimator(fragmentAnimator: FragmentAnimator?) {
@@ -32,7 +36,7 @@ open class SupportActivity : AppCompatActivity(), ISupportActivity {
 
     override fun getSupportDelegate(): SupportActivityDelegate = mDelegate
 
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean = mDelegate.dispatchTouchEvent(ev)
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean = mDelegate.dispatchTouchEvent(ev)  || super.dispatchTouchEvent(ev)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

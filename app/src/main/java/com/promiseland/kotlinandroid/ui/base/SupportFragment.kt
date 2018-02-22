@@ -12,6 +12,14 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator
  * Created by joseph on 2018/2/21.
  */
 open class SupportFragment : Fragment(), ISupportFragment {
+    override fun post(runnable: Runnable?) {
+        mDelegate.post(runnable)
+    }
+
+    override fun enqueueAction(runnable: Runnable?) {
+        mDelegate.post(runnable)
+    }
+
     private val mDelegate = SupportFragmentDelegate(this)
 
     override fun setFragmentResult(resultCode: Int, bundle: Bundle?) {
