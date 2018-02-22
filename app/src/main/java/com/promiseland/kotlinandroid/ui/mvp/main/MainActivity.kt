@@ -9,6 +9,10 @@ import com.promiseland.kotlinandroid.ui.base.BaseContract
  * Created by joseph on 2018/2/18.
  */
 class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
+    override fun post(runnable: Runnable?) {
+
+    }
+
     /**
      * 获取页面布局 id
      */
